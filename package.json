@@ -1,0 +1,26 @@
+{
+    "name": "hls",
+    "displayName": "HLS Syntax highlighting",
+    "description": "Syntax highlighting for HLS manifest files.",
+    "version": "0.0.1",
+    "publisher": "REDspace",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "HLS",
+            "aliases": ["hls", "HLS", "HTTP LIVE STREAMING"],
+            "extensions": [".m3u8"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hls",
+            "scopeName": "source.hls",
+            "path": "./syntaxes/hls.tmLanguage.json"
+        }]
+    }
+}

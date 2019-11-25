@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "hls",
+	"patterns": [
+		{
+			"include": "#tags"
+		},
+		{
+			"include": "#segments"
+		}
+	],
+	"repository": {
+		"segments": {
+			"patterns": [
+				{
+					"name": "editor.foreground",
+					"match": "^[^#]+"
+				}
+			]
+		},
+		"tags": {
+			"begin": "#[^:]+",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.language.json"
+				}
+			},
+			"end": "$",
+			"patterns": [
+				{
+					"name": "string.quoted",
+					"match": "\"[^\"]+\""
+				}
+			]
+		}
+	},
+	"scopeName": "source.hls"
+}
